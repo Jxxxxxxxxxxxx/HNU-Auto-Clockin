@@ -43,7 +43,7 @@ def login():
 
 def setLocation():
     location = json.loads(requests.get(f'http://api.tianditu.gov.cn/geocoder?ds={{"keyWord":\"{args.province+args.city+args.county}\"}}&tk=2355cd686a32d016021bffbc4a69d880').text)["location"]
-    real_address = "。" # 在此填写详细地址
+    real_address = "天马学生公寓" # 在此填写详细地址
     return location["lon"], location["lat"], real_address
 
 def main():
@@ -58,10 +58,15 @@ def main():
                     "RealCounty":args.county,
                     "RealAddress":real_address,
                     "BackState":1,
-                    "MorningTemp":"36.5",
+                    "MorningTemp":"36.4",
                     "NightTemp":"36.5",
                     "tripinfolist":[],
-                    "QRCodeColor":"绿色"
+                    "QRCodeColor":"绿色",
+                    "BuildingName":"天马3区11栋",
+                    "IsInCampus":"是",
+                    "ParkName":"天马园区",
+                    "IsNormalTemperature":"是",
+                    "IsUnusual":"否"
                     }
 
     clockin = requests.post(clockin_url, headers=headers, json=clockin_data)
