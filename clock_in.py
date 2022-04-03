@@ -62,7 +62,7 @@ def main():
                     "NightTemp":"36.5",
                     "tripinfolist":[],
                     "QRCodeColor":"绿色",
-                    "BuildingName":"天马3区11栋",
+                    "BuildingName":"天马1区3栋",
                     "IsInCampus":"是",
                     "ParkName":"天马园区",
                     "IsNormalTemperature":"是",
